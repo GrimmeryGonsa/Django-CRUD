@@ -1,0 +1,25 @@
+{% extends 'employee_register/base.html' %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<p>will use django form to implememnt crud </p>
+<form action=" " method="POST" autocomplete="off" >
+{{form|crispy}}
+{% csrf_token %}
+<div class="row">
+    <div class="col-md-8">
+        <button type="submit" class="btn btn-success btn-block btn-lg"><i class="fas fa-database"></i> Submit </button>
+    </div>
+    <div class="col-md-4">
+        <a href="{% url 'employee_list' %}" class= "btn btn-secondary btn-block btn-lg">
+            <i class="fas fa-stream"></i> Back to List 
+        </a>
+            
+    </div>
+
+</div>
+
+</form>
+
+ {% endblock %} 
