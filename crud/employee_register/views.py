@@ -2,6 +2,9 @@ from django.shortcuts import render,redirect
 from .forms import EmployeeForm 
 from .models import Employee
 
+
+def index(request):
+    return render(request,'employee_register/index.html')
 # Create your views here.
 def employee_list(request):
     context={'employee_list':Employee.objects.all()}
